@@ -1,21 +1,20 @@
 import React from 'react'
 
-import {getUser , getUSerList} from './endPoints'
+import { getUsersList, getUser } from './endPoints'
 
-export default function withService (Component){
-   const  ComponentWithService = props =>(
-
+export default function withServices(Component){
+    const ComponentWithServices = props => {
         <>
-        <Component service={{
-            getUSer,
-            getUSerList,
-        }} 
-        {...props}/>
-
-
+            <Component 
+                service = {{
+                    getUser,
+                    getUsersList
+                }}
+                
+            {...props} 
+            />
         </>
-    )
-
- return ComponentWithService
+    }
+return    ComponentWithServices
 
 }
