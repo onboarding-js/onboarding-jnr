@@ -7,7 +7,7 @@ export default function Input() {
 
     console.log(user)
     return (
-        <form>
+        <form >
             <input type='text' name='search-bar' value={user}
                 onChange={(e) => setUser(e.target.value)}
             />
