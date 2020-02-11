@@ -4,19 +4,20 @@ export const InputContext = createContext();
 
 export function InputContextProvider ({children}){
     const [user , setUser] = useState('')
-    const [valueInput, setValueInput] = useState({})
+    // const [valueInput, setValueInput] = useState({})
     return(
         <InputContext.Provider 
         value={{
             user, 
             setUser,
-            valueInput,
-            setValueInput
+            // valueInput,
+            // setValueInput
         }}>
             {children}
         </InputContext.Provider>
       
     );
+
 
 }
 
