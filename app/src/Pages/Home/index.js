@@ -4,6 +4,7 @@ import Input from '../../Components/Input'
 // import { getUser, getUserList} from '../../services/endPoints'
 import { InputContext } from '../../contexts/InputContext'
 import { withServices } from '../../services/index'
+import { Page1 } from '../../styled/styled'
 
 function Home({service}) {
     const[userList, setUserList] = useState([])
@@ -18,12 +19,13 @@ function Home({service}) {
 
 // })
     return (
-        <>
+        <Page1>
+
             <Logo />
             <Input />
 
 
-        </>
+        </Page1>
 
         
     )

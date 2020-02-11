@@ -1,11 +1,14 @@
 import React from 'react';
+import { Title } from '../../styled/styled'
 
 export default function Logo (){
 
     return (
 
-        <span>Github<span>Search</span></span>
+        <Title>Github<span>Search</span></Title>
     
     )
 
-    }
+ }
+
+ 

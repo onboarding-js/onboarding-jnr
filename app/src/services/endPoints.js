@@ -2,7 +2,7 @@ import axiosInstance from './baseUrl'
 
 
 export const getUserList = (search) => {
-    console.log(axiosInstance.baseUrl)
+    // console.log(axiosInstance.baseUrl)
     return axiosInstance.get(`/search/users?q=${search}`)
 }
 

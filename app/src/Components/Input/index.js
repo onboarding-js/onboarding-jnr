@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { InputContext } from '../../contexts/InputContext.js';
-// import { getUser } from     '../../services/endPoints'
 import { withServices } from '../../services/index';
+import { Search } from '../../styled/styled'
 
 
 function Input({ service }) {
@@ -15,23 +15,26 @@ function Input({ service }) {
 // }
 
 
-  function searching() {
-    service.getUserList(user).then(resp => {
+  function searching(e) {
+    e.preventDefault()
+    service.getUserList(user).then(resp => {console.log(resp);
+    
     }).catch(err => {
       console.log('Erro Capturado: ', err)
     })
 
   }
-
+  
 
   return (
     <>
 
+     < Search onSubmit={(e) => searching(e)} >
       <input type='text' name='search-bar' value={user}
         onChange={(e) => setUser(e.target.value)}
       />
-      <button onClick={() => searching()}>enviar</button>
-  
+      <button onClick={(e) => searching(e)} >enviar</button>
+    </Search>
     </>
 
 
